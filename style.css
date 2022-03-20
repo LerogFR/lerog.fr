@@ -1,5 +1,9 @@
 @import url('http://fonts.cdnfonts.com/css/catamaran');
 
+html {
+	scroll-behavior: smooth;
+}
+
 body{
 	font-family: 'Catamaran', sans-serif;
 	margin: 0px;
@@ -8,13 +12,14 @@ body{
 }
 
 header{
+	z-index: 1;
 	position: fixed;
 	height: 64px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	background: linear-gradient(90deg, rgba(23,47,40,0.4) 0%, rgba(23,47,40,0.6) 75%, rgba(2,27,31,0.7) 100%);
-	backdrop-filter: blur(8px);
+	background: linear-gradient(90deg, rgba(27, 93, 41, 0.3) 0%, rgba(8, 25, 18, 0.3) 75%, rgba(1, 33, 15, 0.6) 100%);
+	backdrop-filter: blur(16px);
 }
 
 header div{
@@ -23,7 +28,14 @@ header div{
 }
 
 main{
-	height: 4300px;
+	height: 2000px;
+}
+
+footer{
+	background-image: url("./img/footer_lines.png");
+	background-position: center top;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 #nav_container{
@@ -35,13 +47,53 @@ main{
 }
 
 #nav_container li{
-	margin: 10px 22px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin: 0px 16px;
 }
 
 #nav_container li a{
+	margin-top: 8px;
+	display: flex;
 	color: #E7E7E7;
 	text-decoration: none;
 	font-size: 28px;
+}
+
+#nav_container li div{
+	visibility: hidden;
+	background-color: #FDFDFD;
+	height: 2px;
+}
+
+#nav_container li:hover > div{
+	visibility: visible;
+}
+
+#nav_container li:active > a img:nth-child(1){
+	padding-top: 5px;
+}
+
+#nav_container li a img{
+	height: 32px;
+	padding-top: 7px;
+	padding-right: 6px;
+}
+
+#nav_container li h1{
+	z-index: -1;
+	margin-left: 40px;
+	margin-top: 12px;
+	font-size: 28px;
+	position: absolute;
+	font-weight: 400;
+	-webkit-text-fill-color: rgba(0, 0, 0, 0.6);
+	filter: blur(2px);
+}
+
+#main_logo{
+	padding-left: 4px;
 }
 
 #main_logo:hover{
@@ -74,25 +126,76 @@ main{
 }
 
 #welcome_text{
+	z-index: 0;
 	height:inherit;
 	margin: 0vw 5vw 0vw 1.5vw;
 	font-size: 2vw;
 	font-weight: 400;
+	/* backdrop-filter: blur(16px); */
 }
 
-#contact{
+#ctc{
+	margin-left: 6vw;
+	margin-bottom: 6vw;
+	padding-top: 5vw;
 	display: flex;
 	justify-content: flex-start;
 }
 
+#ctc div{
+	margin: 0vw 2vw;
+}
+
+#ctc div h2{
+	margin: 8vw 0vw 0vw 0vw;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+#ctc div a{
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#ctc1{background: linear-gradient(to right, #9FDB45 0%, #95D746 100%);}
+#ctc2{background: linear-gradient(to right, #95D746 0%, #85D047 100%);}
+#ctc3{background: linear-gradient(to right, #85D047 0%, #77CB48 100%);}
+#ctc4{background: linear-gradient(to right, #77CB48 0%, #69C44B 100%);}
+#ctc5{background: linear-gradient(to right, #69C44B 0%, #5ABF4B 100%);}
+
+
 #info{
 	display: flex;
 	justify-content: space-between;
+	padding: 2px 10px;
+	background-color: #151B24;
+}
+
+#info a, #info div{
+	font-size: 18px;
+	color: #475253;
+}
+
+#info a:hover{
+	background: linear-gradient(to bottom, #CCFFFA 0%, #5EC9FF 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.shadow{
+	z-index: -1;
+	margin-top: 4px;
+	position: absolute;
 }
 
 .text{
-	text-shadow: 1px 1px 0 #929597, 2px 2px 0 #636768, 3px 3px 0 #576062, 4px 4px 5px rgba(0, 0, 0, 0.4);
-	font-weight: 600;
+	background: linear-gradient(to bottom, #FFFFFF 0%, #C9CAC9 100%);
+	font-weight: 400;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .fr_flag:hover{

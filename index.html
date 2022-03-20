@@ -9,14 +9,54 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<img src="./img/lg_logo_sel.png" style="display:none;" alt="" />
+	<img src="./img/lg_logo_act.png" style="display:none;" alt="" />
+	<img src="./img/lang/fr_flag_act.png" style="display:none;" alt="" />
+	<img src="./img/lang/en_flag_sel.png" style="display:none;" alt="" />
+	<img src="./img/lang/en_flag_act.png" style="display:none;" alt="" />
+	<img src="./img/lang/es_flag_sel.png" style="display:none;" alt="" />
+	<img src="./img/lang/es_flag_act.png" style="display:none;" alt="" />
 	<div id="page">
 		<header>
 			<div>
 				<a href="#page"><img id="main_logo" src="./img/lg_logo.png" alt="lg_logo"></a>
 				<ul id="nav_container" class="text">
-					<li><a href="#gr">Réalisations graphiques</a></li>
-					<li><a href="#yt">YouTube</a></li>
-					<li><a href="#mc">Minecraft</a></li>
+					<li>
+						<h1>Réalisations graphiques</h1>
+						<div class="selbar"></div>
+						<a href="#gr">
+							<img src="./img/navbar/gr_icon.png" alt="gr_icon">
+							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
+							Réalisations graphiques
+						</a>
+					</li>
+					<li>
+						<h1>YouTube</h1>
+						<div class="selbar"></div>
+						<a href="#yt">
+							<img src="./img/navbar/yt_icon.png" alt="yt_icon">
+							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
+							YouTube
+						</a>
+					</li>
+					<li>
+						<h1>Minecraft</h1>
+						<div class="selbar"></div>
+						<a href="#mc">
+							<img src="./img/navbar/mc_icon.png" alt="mc_icon">
+							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
+							Minecraft
+						</a>
+					</li>
+					<li>
+						<h1>Contact</h1>
+						<div class="selbar"></div>
+						<a href="#ctc">
+							<img src="./img/navbar/ctc_icon.png" alt="ctc_icon">
+							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
+							Contact
+						</a>
+					</li>
 				</ul>
 			</div>
 			<div>
@@ -32,7 +72,9 @@
 						<img id="lerog_logo" src="./img/Lerog.png" alt="lerog_logo">
 					</div>
 					<div id="welcome_text">
-						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nibh eu sapien mattis pulvinar. Integer tristique diam eget dui gravida ullamcorper. Quisque quis elit egestas risus iaculis mattis. Nunc malesuada volutpat molestie. Pellentesque habitant morbi tristique.</p>
+						<p class="text">
+							Hey ! Je suis étudiant en informatique
+						</p>
 					</div>
 				</div>
 			</div>
@@ -47,22 +89,26 @@
 			</div>
 		</main>
 		<footer>
-			<div id="contact">
+			<div id="ctc">
 				<div>
 					<h2>EMAIL</h2>
-					<a href="">lerog [at] outlook.fr</a>
+					<a id="ctc1" href="mailto:lerog@outlook.fr">Lerog@outlook.fr</a>
+				</div>
+				<div>
+					<h2>DISCORD</h2>
+					<a id="ctc2" href="https://discord.com" target="_blank">Lérog#9244</a>
 				</div>
 				<div>
 					<h2>YOUTUBE</h2>
-					<a href="">Lérog</a>
+					<a id="ctc3" href="https://www.youtube.com/channel/UC87g7dcK1-mDuZWd7ku-fbw" target="_blank">Lérog</a>
 				</div>
 				<div>
 					<h2>TWITTER</h2>
-					<a href="">@LerogFR</a>
+					<a id="ctc4" href="https://twitter.com/LerogFR" target="_blank">@LerogFR</a>
 				</div>
 				<div>
 					<h2>GITHUB</h2>
-					<a href="">LerogFR</a>
+					<a id="ctc5" href="https://github.com/LerogFR" target="_blank">LerogFR</a>
 				</div>
 			</div>
 			<div id="info">
