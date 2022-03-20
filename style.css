@@ -1,0 +1,120 @@
+@import url('http://fonts.cdnfonts.com/css/catamaran');
+
+body{
+	font-family: 'Catamaran', sans-serif;
+	margin: 0px;
+	color: #E7E7E7;
+	background-color: rgb(13, 17, 20);
+}
+
+header{
+	position: fixed;
+	height: 64px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(90deg, rgba(23,47,40,0.4) 0%, rgba(23,47,40,0.6) 75%, rgba(2,27,31,0.7) 100%);
+	backdrop-filter: blur(8px);
+}
+
+header div{
+	display: flex;
+	justify-content: flex-start;
+}
+
+main{
+	height: 4300px;
+}
+
+#nav_container{
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav_container li{
+	margin: 10px 22px;
+}
+
+#nav_container li a{
+	color: #E7E7E7;
+	text-decoration: none;
+	font-size: 28px;
+}
+
+#main_logo:hover{
+	content: url("./img/lg_logo_sel.png");
+}
+
+#main_logo:active{
+	content: url("./img/lg_logo_act.png");
+}
+
+#page{
+	background-image: url("./img/background_lines.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#colorful_zone{
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 14vw;
+}
+
+#lerog_logo_container{
+	height: 16vw;
+}
+
+#lerog_logo{
+	height:inherit;
+	margin: 3vw 5vw 0vw 5vw;
+}
+
+#welcome_text{
+	height:inherit;
+	margin: 0vw 5vw 0vw 1.5vw;
+	font-size: 2vw;
+	font-weight: 400;
+}
+
+#contact{
+	display: flex;
+	justify-content: flex-start;
+}
+
+#info{
+	display: flex;
+	justify-content: space-between;
+}
+
+.text{
+	text-shadow: 1px 1px 0 #929597, 2px 2px 0 #636768, 3px 3px 0 #576062, 4px 4px 5px rgba(0, 0, 0, 0.4);
+	font-weight: 600;
+}
+
+.fr_flag:hover{
+	content: url("./img/lang/fr_flag_sel.png");
+}
+
+.fr_flag:active{
+	content: url("./img/lang/fr_flag_act.png");
+}
+
+.en_flag:hover{
+	content: url("./img/lang/en_flag_sel.png");
+}
+
+.en_flag:active{
+	content: url("./img/lang/en_flag_act.png");
+}
+
+.es_flag:hover{
+	content: url("./img/lang/es_flag_sel.png");
+}
+
+.es_flag:active{
+	content: url("./img/lang/es_flag_act.png");
+}
