@@ -38,6 +38,10 @@ footer{
 	background-repeat: no-repeat;
 }
 
+footer .title{
+	padding-top: 12vw;
+}
+
 #nav_container{
 	display: flex;
 	justify-content: space-between;
@@ -58,6 +62,7 @@ footer{
 	display: flex;
 	color: #E7E7E7;
 	text-decoration: none;
+	white-space: nowrap;
 	font-size: 28px;
 }
 
@@ -94,6 +99,7 @@ footer{
 
 #main_logo{
 	padding-left: 4px;
+	height: 64px;
 }
 
 #main_logo:hover{
@@ -131,13 +137,11 @@ footer{
 	margin: 0vw 5vw 0vw 1.5vw;
 	font-size: 2vw;
 	font-weight: 400;
-	/* backdrop-filter: blur(16px); */
+	backdrop-filter: blur(16px);
 }
 
 #ctc{
-	margin-left: 6vw;
-	margin-bottom: 6vw;
-	padding-top: 5vw;
+	margin: 3vw 0vw 7vw 6vw;
 	display: flex;
 	justify-content: flex-start;
 }
@@ -147,14 +151,14 @@ footer{
 }
 
 #ctc div h2{
-	margin: 8vw 0vw 0vw 0vw;
-	font-size: 18px;
+	margin-bottom: 0px;
+	font-size: 16px;
 	font-weight: 600;
 }
 
 #ctc div a{
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 500;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -166,6 +170,30 @@ footer{
 #ctc4{background: linear-gradient(to right, #77CB48 0%, #69C44B 100%);}
 #ctc5{background: linear-gradient(to right, #69C44B 0%, #5ABF4B 100%);}
 
+#ctc1:hover{
+	background: linear-gradient(to top, #4487eb 0%, #5ea9ff 90%);
+	-webkit-background-clip: text;
+}
+
+#ctc2:hover{
+	background: linear-gradient(to top, #404EED 0%, #6673ff 70%);
+	-webkit-background-clip: text;
+}
+
+#ctc3:hover{
+	background: linear-gradient(to top, #bb1116 0%, #E52D27 70%);
+	-webkit-background-clip: text;
+}
+
+#ctc4:hover{
+	background: linear-gradient(to top, #00ACED 0%, #1DCAFF 70%);
+	-webkit-background-clip: text;
+}
+
+#ctc5:hover{
+	background: linear-gradient(to top, #9230aa 0%, #b943d1 70%);
+	-webkit-background-clip: text;
+}
 
 #info{
 	display: flex;
@@ -185,17 +213,28 @@ footer{
 	-webkit-text-fill-color: transparent;
 }
 
+#footer_bg_ext{
+	background-color: red;
+	height: 3vw;
+	display: none;
+}
+
 .shadow{
 	z-index: -1;
 	margin-top: 4px;
 	position: absolute;
 }
 
-.text{
+.nav_text{
 	background: linear-gradient(to bottom, #FFFFFF 0%, #C9CAC9 100%);
 	font-weight: 400;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.text{
+	padding-top: ;
+	font-weight: 500;
 }
 
 .fr_flag:hover{
@@ -220,4 +259,39 @@ footer{
 
 .es_flag:active{
 	content: url("./img/lang/es_flag_act.png");
+}
+
+.title{
+	display: flex;
+	margin-left: 8vw;
+}
+
+.title img{
+	margin: 8px 8px 0px 0px;
+	height: 32px;
+}
+
+.title h1{
+	margin: 0;
+	font-weight: 400;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.6),
+	only screen and (-moz-min-device-pixel-ratio: 1.6),
+	only screen and (-o-min-device-pixel-ratio: 1.6/1),
+	only screen and (min-device-pixel-ratio: 1.6),
+	only screen and (min-resolution: 1.6dppx) {
+	header {
+		zoom: 85%;
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5),
+	only screen and (-moz-min-device-pixel-ratio: 3.5),
+	only screen and (-o-min-device-pixel-ratio: 3.5/1),
+	only screen and (min-device-pixel-ratio: 3.5),
+	only screen and (min-resolution: 3.5dppx) {
+	header {
+		zoom: 50%;
+	}
 }
