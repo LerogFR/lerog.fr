@@ -19,7 +19,8 @@ header{
 	display: flex;
 	justify-content: space-between;
 	background: linear-gradient(90deg, rgba(27, 93, 41, 0.3) 0%, rgba(8, 25, 18, 0.3) 75%, rgba(1, 33, 15, 0.6) 100%);
-	backdrop-filter: blur(16px);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 }
 
 header div{
@@ -67,12 +68,16 @@ footer .title{
 }
 
 #nav_container li div{
-	visibility: hidden;
 	background-color: #FDFDFD;
 	height: 2px;
+	width: 0%;
+	margin-left: 50%;
+	transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
 }
 
 #nav_container li:hover > div{
+	margin-left: 0%;
+	width: 100%;
 	visibility: visible;
 }
 
@@ -91,6 +96,7 @@ footer .title{
 	margin-left: 40px;
 	margin-top: 12px;
 	font-size: 28px;
+	white-space: nowrap;
 	position: absolute;
 	font-weight: 400;
 	-webkit-text-fill-color: rgba(0, 0, 0, 0.6);
@@ -134,10 +140,20 @@ footer .title{
 #welcome_text{
 	z-index: 0;
 	height:inherit;
-	margin: 0vw 5vw 0vw 1.5vw;
-	font-size: 2vw;
+	margin: 3.4vw 6vw 0vw 0.2vw;
+	font-size: 1.75vw;
 	font-weight: 400;
-	backdrop-filter: blur(16px);
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px 0 rgba(48, 83, 63, 0.5);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 1vw;
+	border: 0.12vw solid rgba(255, 255, 255, 0.18);
+}
+
+#welcome_text p{
+	text-align: center;
+	margin: 1vw 1.2vw;
 }
 
 #ctc{
@@ -213,12 +229,6 @@ footer .title{
 	-webkit-text-fill-color: transparent;
 }
 
-#footer_bg_ext{
-	background-color: red;
-	height: 3vw;
-	display: none;
-}
-
 .shadow{
 	z-index: -1;
 	margin-top: 4px;
@@ -232,9 +242,9 @@ footer .title{
 	-webkit-text-fill-color: transparent;
 }
 
-.text{
-	padding-top: ;
-	font-weight: 500;
+.glass_text{
+	font-weight: 300;
+	text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.3);
 }
 
 .fr_flag:hover{
