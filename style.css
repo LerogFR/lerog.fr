@@ -28,6 +28,10 @@ header div{
 	justify-content: flex-start;
 }
 
+a p{
+	margin: 0px;
+}
+
 main{
 	height: 2000px;
 }
@@ -149,6 +153,10 @@ footer .title{
 	-webkit-backdrop-filter: blur(8px);
 	border-radius: 1vw;
 	border: 0.12vw solid rgba(255, 255, 255, 0.18);
+}
+
+#welcome_text{
+	background-attachment: scroll;
 }
 
 #welcome_text p{
