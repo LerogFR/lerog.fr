@@ -1,5 +1,5 @@
 
-var lang = "es";
+var lang = "en";
 
 class Fr {
 	gr = "Réalisations graphiques";
@@ -12,16 +12,16 @@ class Fr {
 class En {
 	gr = "Graphical creations";
 	ctc = "Contact";
-	welcome1 = "A computer science student with a passion for science who's getting into web development!";
-	welcome2 = "On this website, you'll find my best creations:<br>graphic design audiovisual content various projects";
+	welcome1 = "A computer science student with a passion for science<br>making&nbsphis&nbspway&nbspin&nbspthe&nbspworld&nbspof&nbspweb&nbspdevelopment!&nbsp&#128187";
+	welcome2 = "On this website, you'll find my best creations:<br>graphic&nbspdesign&nbsp&#128396&nbsp&nbsp&#183&nbsp&nbspvideos&nbsp&#127916&nbsp&nbsp&#183&nbsp&nbspvarious&nbspprojects&nbsp&#128579";
 	legal = "Legal information";
 	madeby = "Made by Léo G. - 2022";
 }
 class Es {
 	gr = "Creaciones gráficas";
 	ctc = "Contacto";
-	welcome1 = "Un estudiante de informática apasionado por la ciencia que se inicia en el desarrollo web";
-	welcome2 = "En este sitio web, presento mis mejores creaciones:<br>diseño gráfico audiovisual varios proyectos";
+	welcome1 = "¡Un&nbspestudiante&nbspde&nbspinformática&nbspapasionado&nbsppor&nbspla&nbspciencia<br>que&nbspse&nbspinicia&nbspen&nbspel&nbspdesarrollo&nbspweb!&nbsp&#128187";
+	welcome2 = "En&nbspeste&nbspsitio&nbspweb,&nbsppresento&nbspmis&nbspmejores&nbspcreaciones:<br>diseño&nbspgráfico&nbsp&#128396&nbsp&nbsp&#183&nbsp&nbspaudiovisual&nbsp&#127916&nbsp&nbsp&#183&nbsp&nbspvarios&nbspproyectos&nbsp&#128579";
 	legal = "Avisos legales";
 	madeby = "Hecho por Léo G. - 2022";
 }
