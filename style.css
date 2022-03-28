@@ -2,6 +2,8 @@
 
 html {
 	scroll-behavior: smooth;
+	max-width: 100%;
+    overflow-x: hidden;
 }
 
 body{
@@ -228,7 +230,7 @@ footer .title{
 
 #info a, #info div{
 	font-size: 18px;
-	color: #475253;
+	color: #566364;
 }
 
 #info a:hover{
@@ -311,5 +313,123 @@ footer .title{
 	only screen and (min-resolution: 3.5dppx) {
 	header {
 		zoom: 50%;
+	}
+}
+
+@media all and (orientation: portrait){
+
+}
+
+@media screen and (max-width: 964px){
+	header{
+		height: 48px;
+	}
+	
+	#nav_container li{
+		margin: 0px 12px;
+	}
+	
+	#nav_container li a{
+		margin-top: 6px;
+		font-size: 21px;
+	}
+	
+	#nav_container li div{
+		height: 2px;
+	}
+	
+	#nav_container li:active > a img:nth-child(1){
+		padding-top: 3px;
+	}
+	
+	#nav_container li a img{
+		height: 24px;
+		padding-top: 5px;
+		padding-right: 4px;
+	}
+	
+	#nav_container li h1{
+		margin-left: 30px;
+		margin-top: 9px;
+		font-size: 21px;
+	}
+	
+	#main_logo{
+		padding-left: 3px;
+		height: 48px;
+	}
+
+	#ctc div h2, #ctc div a{
+		font-size: 14px;
+	}
+
+	#legal.fadable_text, #madeby.fadable_text{
+		font-size: 16px;
+	}
+
+	.title img{
+		margin: 5px 6px 0px 0px;
+		height: 24px;
+	}
+
+	.title h1{
+		font-size: 21px;
+	}
+}
+
+@media screen and (max-width: 726px){
+	header{
+		height: 32px;
+	}
+	
+	#nav_container li{
+		margin: 0px 8px;
+	}
+	
+	#nav_container li a{
+		margin-top: 4px;
+		font-size: 14px;
+	}
+	
+	#nav_container li div{
+		height: 1px;
+	}
+	
+	#nav_container li:active > a img:nth-child(1){
+		padding-top: 2px;
+	}
+	
+	#nav_container li a img{
+		height: 16px;
+		padding-top: 4px;
+		padding-right: 3px;
+	}
+	
+	#nav_container li h1{
+		margin-left: 20px;
+		margin-top: 6px;
+		font-size: 14px;
+	}
+	
+	#main_logo{
+		padding-left: 2px;
+		height: 32px;
+	}
+
+	#ctc div h2, #ctc div a{
+		font-size: 12px;
+	}
+
+	#legal.fadable_text, #madeby.fadable_text{
+		font-size: 14px;
+	}
+
+	.title img{
+		margin: 3px 4px 0px 0px;
+		height: 16px;
+	}
+
+	.title h1{
+		font-size: 14px;
 	}
 }
