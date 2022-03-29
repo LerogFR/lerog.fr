@@ -56,6 +56,7 @@ function change_lang(on_change){
 function set_text(){
 	document.getElementsByClassName("gr_text")[0].innerHTML = langobj.gr;
 	document.getElementsByClassName("gr_text")[1].innerHTML = langobj.gr;
+	document.getElementsByClassName("gr_text")[2].innerHTML = langobj.gr;
 	document.getElementsByClassName("ctc_text")[0].innerHTML = langobj.ctc;
 	document.getElementsByClassName("ctc_text")[1].innerHTML = langobj.ctc;
 	document.getElementsByClassName("ctc_text")[2].innerHTML = langobj.ctc;
@@ -67,7 +68,7 @@ function set_text(){
 
 window.addEventListener("scroll", function(event){
 	let scroll = this.scrollY;
-	document.getElementById("colorful_zone").style.padding = 14+scroll/(0.034*scroll+14)+"vw 0vw 0vw 0vw";
+	document.getElementById("colorful_zone").style.padding = 14+scroll/(0.034*scroll+14)+"vw 0vw "+(30-(scroll/(0.034*scroll+14)))+"vw 0vw";
 });
 
 document.getElementsByClassName("fr_flag")[0].addEventListener("click", function(event){
