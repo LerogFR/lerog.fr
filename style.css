@@ -1,5 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/catamaran');
 
+disableDarkMode();
+
 html {
 	scroll-behavior: smooth;
 	max-width: 100%;
@@ -11,6 +13,7 @@ body{
 	margin: 0px;
 	color: #E7E7E7;
 	background-color: rgb(13, 17, 20);
+	max-width: 100%;
 }
 
 header{
@@ -35,7 +38,7 @@ a p{
 }
 
 main{
-	height: 2000px;
+	height: 180vh;
 }
 
 footer{
@@ -150,10 +153,10 @@ footer .title{
 	margin: 3.4vw 6vw 0vw 0.2vw;
 	font-size: 1.75vw;
 	font-weight: 400;
-	background: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 8px 32px 0 rgba(48, 83, 63, 0.5);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
+	background: rgba(204, 229, 214, 0.2);
+	box-shadow: 0 1vw 4vw 0.14vw rgba(48, 83, 63, 0.5);
+	backdrop-filter: blur(0.6vw) saturate(110%);
+	-webkit-backdrop-filter: blur(0.6vw) saturate(110%);
 	border-radius: 1vw;
 	border: 0.12vw solid rgba(255, 255, 255, 0.18);
 }
@@ -240,6 +243,11 @@ footer .title{
 	-webkit-text-fill-color: transparent;
 }
 
+#WIP{
+	color: orange;
+	font-size: 30px;
+}
+
 .shadow{
 	z-index: -1;
 	margin-top: 4px;
@@ -282,6 +290,9 @@ footer .title{
 	content: url("./img/lang/es_flag_act.png");
 }
 
+.fr_flag, .en_flag, .es_flag{
+}
+
 .title{
 	display: flex;
 	margin-left: 8vw;
@@ -296,55 +307,6 @@ footer .title{
 .title h1{
 	margin: 0;
 	font-weight: 400;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.6),
-	only screen and (-moz-min-device-pixel-ratio: 1.6),
-	only screen and (-o-min-device-pixel-ratio: 1.6/1),
-	only screen and (min-device-pixel-ratio: 1.6),
-	only screen and (min-resolution: 1.6dppx) {
-	header {
-		zoom: 85%;
-	}
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 3.5),
-	only screen and (-moz-min-device-pixel-ratio: 3.5),
-	only screen and (-o-min-device-pixel-ratio: 3.5/1),
-	only screen and (min-device-pixel-ratio: 3.5),
-	only screen and (min-resolution: 3.5dppx) {
-	header {
-		zoom: 50%;
-	}
-}
-
-@media all and (orientation: portrait){
-	#colorful_zone{
-		flex-direction: column;
-		align-items: center;
-	}
-
-	#lerog_logo_container{
-		height: 30vw;
-	}
-	
-	#lerog_logo{
-		height:inherit;
-		margin: 0px;
-		padding: 0px;
-	}
-	
-	#welcome_text{
-		height: 30vw;
-		width: 86vw;
-		font-size: 14px;
-		margin: 0px;
-		padding: 0px;
-	}
-
-	#ctc div h2, #ctc div a{
-		font-size:small;
-	}
 }
 
 @media screen and (max-width: 964px){
@@ -387,11 +349,15 @@ footer .title{
 	}
 
 	#ctc div h2, #ctc div a{
-		font-size: 14px;
+		font-size: 1.6vw;
 	}
 
 	#legal.fadable_text, #madeby.fadable_text{
 		font-size: 16px;
+	}
+
+	.fr_flag, .en_flag, .es_flag{
+		height: 48px;
 	}
 
 	.title img{
@@ -448,11 +414,15 @@ footer .title{
 	}
 
 	#ctc div h2, #ctc div a{
-		font-size: 12px;
+		font-size: 1.8vw;
 	}
 
 	#legal.fadable_text, #madeby.fadable_text{
 		font-size: 14px;
+	}
+
+	.fr_flag, .en_flag, .es_flag{
+		height: 32px;
 	}
 
 	.title img{
@@ -466,5 +436,71 @@ footer .title{
 
 	.title{
 		padding-top: 48px;
+	}
+}
+
+@media all and (orientation: portrait){
+	header{
+		display: none;
+	}
+
+	footer{
+		background-size: 160%;
+		padding-top: 8vw;
+	}
+
+	#page{
+		background-size: 184%;
+		background-repeat: no-repeat;
+	}
+
+	#colorful_zone{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#lerog_logo_container{
+		height: 30vw;
+		margin-bottom: 8vw;
+	}
+	
+	#lerog_logo{
+		height:inherit;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	#welcome_text{
+		font-size: 3.8vw;
+		margin: 0px;
+		padding: 0px;
+		box-shadow: 0 1.76vw 4vw 1.8vw rgba(48, 83, 63, 0.28);
+		background: rgba(154, 169, 161, 0.3);
+		backdrop-filter: blur(1.4vw) saturate(110%);
+		-webkit-backdrop-filter: blur(1.4vw) saturate(110%);
+		border-radius: 2.5vw;
+		border: 0.3vw solid rgba(255, 255, 255, 0.2);
+	}
+
+	#welcome1, #welcome2{
+		padding: 0vw 1vw 0vw 1vw;
+	}
+
+	#ctc div h2, #ctc div a{
+		font-size: 2.7vw;
+	}
+
+	.glass_text{
+		text-shadow:
+			0.3vw 0.3vw 1.5vw rgba(0, 0, 0, 0.4);
+	}
+
+	.title img{
+		margin: 0.2vw 1.2vw 0vw 0vw;
+		height: 6vw;
+	}
+
+	.title h1{
+		font-size: 4vw;
 	}
 }

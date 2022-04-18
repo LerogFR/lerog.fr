@@ -1,4 +1,3 @@
-
 let lang = "fr";
 
 class Fr {
