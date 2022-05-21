@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,40 +17,40 @@
 	<img src="./img/lang/es_flag_sel.png" style="display:none;" alt="" />
 	<img src="./img/lang/es_flag_act.png" style="display:none;" alt="" />
 	<div id="page">
-		<header>
+		<header id="header">
 			<div>
-				<a href="#page"><img id="main_logo" src="./img/lg_logo.png" alt="lg_logo"></a>
+				<a href="#page" class="menu_hider"><img id="main_logo" src="./img/lg_logo.png" alt="lg_logo"></a>
 				<ul id="nav_container" class="nav_text">
-					<li>
+					<li class="menu_hider">
 						<h1 class="gr_text fadable_text">Réalisations graphiques</h1>
-						<div></div>
+						<div class="bar_box"></div>
 						<a href="#gr">
 							<img src="./img/navbar/gr_icon.png" alt="gr_icon">
 							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
 							<p class="gr_text fadable_text">Réalisations graphiques</p>
 						</a>
 					</li>
-					<li>
+					<li class="menu_hider">
 						<h1>YouTube</h1>
-						<div></div>
+						<div class="bar_box"></div>
 						<a href="#yt">
 							<img src="./img/navbar/yt_icon.png" alt="yt_icon">
 							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
-							YouTube
+							<p>YouTube</p>
 						</a>
 					</li>
-					<li>
+					<li class="menu_hider">
 						<h1>Minecraft</h1>
-						<div></div>
+						<div class="bar_box"></div>
 						<a href="#mc">
 							<img src="./img/navbar/mc_icon.png" alt="mc_icon">
 							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
-							Minecraft
+							<p>Minecraft</p>
 						</a>
 					</li>
-					<li>
+					<li class="menu_hider">
 						<h1 class="ctc_text fadable_text">Contact</h1>
-						<div></div>
+						<div class="bar_box"></div>
 						<a href="#ctc">
 							<img src="./img/navbar/ctc_icon.png" alt="ctc_icon">
 							<img class="shadow" src="./img/navbar/shadow.png" alt="shadow">
@@ -66,6 +66,11 @@
 			</div>
 		</header>
 		<main>
+			<div>
+				<div id="burger" class="menu_hider">
+					<img src="./img/navbar/burger.png" alt="show_menu_icon">
+				</div>
+			</div>
 			<div>
 				<div id="colorful_zone">
 					<div id="lerog_logo_container">
@@ -129,7 +134,7 @@
 				</div>
 			</div>
 			<div id="info">
-				<a id="legal" href="" class="fadable_text">Mentions légales</a>
+				<a id="legal" href="legal.html" class="fadable_text">Mentions légales</a>
 				<div id="madeby" class="fadable_text">Réalisé par Léo G. - 2022</div>
 			</div>
 		</footer>

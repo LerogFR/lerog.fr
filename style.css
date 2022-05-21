@@ -1,14 +1,13 @@
-@import url('http://fonts.cdnfonts.com/css/catamaran');
-
-disableDarkMode();
+@import url('https://fonts.cdnfonts.com/css/catamaran');
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth !important;
 	max-width: 100%;
     overflow-x: hidden;
 }
 
 body{
+	scroll-behavior: smooth !important;
 	font-family: 'Catamaran', sans-serif;
 	margin: 0px;
 	color: #E7E7E7;
@@ -23,9 +22,9 @@ header{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	background: linear-gradient(90deg, rgba(27, 93, 41, 0.3) 0%, rgba(8, 25, 18, 0.3) 75%, rgba(1, 33, 15, 0.6) 100%);
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
+	background: linear-gradient(90deg, rgba(27, 93, 60, 0.3) 0%, rgba(8, 25, 18, 0.3) 75%, rgba(1, 33, 15, 0.6) 100%);
+	backdrop-filter: blur(12px) opacity(95%) hue-rotate(15deg);
+	-webkit-backdrop-filter: blur(12px) opacity(95%) hue-rotate(15deg);
 }
 
 header div{
@@ -38,7 +37,7 @@ a p{
 }
 
 main{
-	height: 180vh;
+	height: 240vh;
 }
 
 footer{
@@ -76,18 +75,26 @@ footer .title{
 	font-size: 28px;
 }
 
-#nav_container li div{
-	background-color: #FDFDFD;
-	height: 2px;
-	width: 0%;
-	margin-left: 50%;
-	transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
-}
+@media all and (orientation: landscape){
 
-#nav_container li:hover > div{
-	margin-left: 0%;
-	width: 100%;
-	visibility: visible;
+	#nav_container li div{
+		background-color: #FDFDFD;
+		height: 2px;
+		width: 0%;
+		margin-left: 50%;
+		transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
+	}
+
+	#nav_container li:hover > div{
+		margin-left: 0%;
+		width: 100%;
+		visibility: visible;
+	}
+
+	#burger{
+		visibility: hidden;
+		display: none;
+	}
 }
 
 #nav_container li:active > a img:nth-child(1){
@@ -135,7 +142,7 @@ footer .title{
 	display: flex;
 	justify-content: space-evenly;
 	padding-top: 14vw;
-	padding-bottom: 36vw;
+	padding-bottom: 30vw;
 }
 
 #lerog_logo_container{
@@ -190,6 +197,7 @@ footer .title{
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: 500;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -202,26 +210,31 @@ footer .title{
 
 #ctc1:hover{
 	background: linear-gradient(to top, #4487eb 0%, #5ea9ff 90%);
+	background-clip: text;
 	-webkit-background-clip: text;
 }
 
 #ctc2:hover{
 	background: linear-gradient(to top, #404EED 0%, #6673ff 70%);
+	background-clip: text;
 	-webkit-background-clip: text;
 }
 
 #ctc3:hover{
 	background: linear-gradient(to top, #bb1116 0%, #E52D27 70%);
+	background-clip: text;
 	-webkit-background-clip: text;
 }
 
 #ctc4:hover{
 	background: linear-gradient(to top, #00ACED 0%, #1DCAFF 70%);
+	background-clip: text;
 	-webkit-background-clip: text;
 }
 
 #ctc5:hover{
 	background: linear-gradient(to top, #9230aa 0%, #b943d1 70%);
+	background-clip: text;
 	-webkit-background-clip: text;
 }
 
@@ -239,6 +252,7 @@ footer .title{
 
 #info a:hover{
 	background: linear-gradient(to bottom, #CCFFFA 0%, #5EC9FF 90%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -250,13 +264,14 @@ footer .title{
 
 .shadow{
 	z-index: -1;
+	color: red;
 	margin-top: 4px;
 	position: absolute;
 }
 
-.nav_text{
+.nav_text a p{
 	background: linear-gradient(to bottom, #FFFFFF 0%, #C9CAC9 100%);
-	font-weight: 400;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -290,9 +305,6 @@ footer .title{
 	content: url("./img/lang/es_flag_act.png");
 }
 
-.fr_flag, .en_flag, .es_flag{
-}
-
 .title{
 	display: flex;
 	margin-left: 8vw;
@@ -309,7 +321,7 @@ footer .title{
 	font-weight: 400;
 }
 
-@media screen and (max-width: 964px){
+@media screen and (max-width: 1134px){
 	header{
 		height: 48px;
 	}
@@ -374,7 +386,7 @@ footer .title{
 	}
 }
 
-@media screen and (max-width: 726px){
+@media screen and (max-width: 852px){
 	header{
 		height: 32px;
 	}
@@ -440,13 +452,147 @@ footer .title{
 }
 
 @media all and (orientation: portrait){
-	header{
-		display: none;
+
+	#header{
+		visibility: visible;
+		display: block;
+		transition: left 0.14s ease-in-out;
+		left: 100%;
+		z-index: 1;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		justify-content: space-around;
+		background: linear-gradient(rgba(33, 54, 48, 0.2) 0%, rgba(53, 53, 53, 0.5) 100%);
+		backdrop-filter: blur(10px) opacity(95%) sepia(80%) hue-rotate(-60deg) brightness(60%) saturate(65%) contrast(85%);
+		-webkit-backdrop-filter: blur(10px) opacity(95%) sepia(80%) hue-rotate(-60deg) brightness(60%) saturate(65%) contrast(85%);
+	}
+	
+	#header div:nth-child(1){
+		display: block;
+		justify-content: flex-start;
+	}
+
+	#header div:last-child{
+		position: absolute;
+		left: 50%;
+		bottom: 0px;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: space-around;
 	}
 
 	footer{
 		background-size: 160%;
 		padding-top: 8vw;
+	}
+
+	a p{
+		margin: 0px;
+	}
+	
+	main{
+		height: 180vh;
+	}
+
+	main:first-child{
+		z-index: 2;
+	}
+	
+	footer .title{
+		padding-top: 12vw;
+	}
+	
+	#nav_container{
+		display: block;
+		justify-content: space-between;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#nav_container li{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		margin: 3vh 0px;
+	}
+	
+	#nav_container li a{
+		display: flex;
+		color: #E7E7E7;
+		text-decoration: none;
+		white-space: nowrap;
+		font-size: 28px;
+	}
+	
+	#nav_container li div{
+		background-color: #FDFDFD;
+		height: 0px;
+		width: 2px;
+		margin-top: 27px;
+		margin-right: 10px;
+		transition: height 0.2s ease-in-out, margin-top 0.2s ease-in-out;
+	}
+	
+	#nav_container li:hover > div{
+		height: 45px;
+		margin-top: 5px;
+		visibility: visible;
+	}
+	
+	#nav_container li:active > a img:nth-child(1){
+		padding-top: 5px;
+		padding-left: 10px;
+	}
+	
+	#nav_container li a img{
+		height: 32px;
+		padding-top: 7px;
+		padding-left: 10px;
+		padding-right: 20px;
+	}
+	
+	#nav_container li h1{
+		z-index: -1;
+		margin-left: 76px;
+		margin-top: 6px;
+		font-size: 28px;
+		white-space: nowrap;
+		position: absolute;
+		font-weight: 400;
+		-webkit-text-fill-color: rgba(0, 0, 0, 0.6);
+		filter: blur(2px);
+	}
+	
+	#main_logo{
+		padding-top: 2px;
+		padding-left: 4px;
+		height: 64px;
+	}
+	
+	#main_logo:hover{
+		content: url("./img/lg_logo_sel.png");
+	}
+	
+	#main_logo:active{
+		content: url("./img/lg_logo_act.png");
+	}
+
+	#burger{
+		z-index: 2;
+		position: fixed;
+		height: 64px;
+		width: 64px;
+		top: 0px;
+		right: 0px;
+		padding-right: 4px;
+		padding-top: 4px;
+	}
+
+	#burger img{
+		height: 64px;
+		width: 64px;
 	}
 
 	#page{
@@ -490,6 +636,10 @@ footer .title{
 		font-size: 2.7vw;
 	}
 
+	.fr_flag, .en_flag, .es_flag{
+		height: 20vw;
+	}
+
 	.glass_text{
 		text-shadow:
 			0.3vw 0.3vw 1.5vw rgba(0, 0, 0, 0.4);
@@ -502,5 +652,72 @@ footer .title{
 
 	.title h1{
 		font-size: 4vw;
+	}
+
+	@media screen and (max-width: 360px){
+		#nav_container li a {
+			font-size: 20px;
+		}
+
+		#nav_container li h1{
+			margin-left: 72px;
+			font-size: 20px;
+		}
+
+		#nav_container li:active > a img:nth-child(1){
+			padding-top: 0px;
+		}
+		
+		#nav_container li a img{
+			padding-top: 2px;
+			padding-right: 18px;
+		}
+
+		#nav_container li div{
+			margin-top: 8px;
+		}
+
+		#nav_container li:hover > div{
+			height: 30px;
+		}
+	}
+
+	@media screen and (min-width: 470px){
+		.fr_flag, .en_flag, .es_flag{
+			height: 94px;
+		}
+	}
+}
+
+/* Gestion de cas : la page est chargée avec firefox */
+@-moz-document url-prefix() {
+	header{
+		background-image: url("./img/moz/nav_bg.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#welcome_text{
+		background-image: url("./img/moz/glass_bg_landscape.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	@media all and (orientation: portrait){
+		#welcome_text{
+			background-image: url("./img/moz/glass_bg_portrait.png");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		#header{
+			background-image: url("./img/moz/portrait_menu_bg.png");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
 	}
 }
